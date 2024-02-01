@@ -1,0 +1,10 @@
+{
+  "POST":"https://httpbin.org/post",
+  "OPC":{
+    "Server":"InSAT.ModbusOPCServer.DA",
+    "Tags":  [
+    "PN_SIMULATOR.PD_SIMULATOR.DigitConst",
+    "PN_SIMULATOR.PD_SIMULATOR.AnalogConst"
+    ]
+  }    
+}

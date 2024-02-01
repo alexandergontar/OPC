@@ -1,0 +1,26 @@
+C:\Users\ZA\source\repos\OPClist\OPC-tagslist\bin\Debug\OPC-tagslist.exe.config
+C:\Users\ZA\source\repos\OPClist\OPC-tagslist\bin\Debug\OPC-tagslist.exe
+C:\Users\ZA\source\repos\OPClist\OPC-tagslist\bin\Debug\OPC-tagslist.pdb
+C:\Users\ZA\source\repos\OPClist\OPC-tagslist\bin\Debug\OPCdotNETLib.dll
+C:\Users\ZA\source\repos\OPClist\OPC-tagslist\obj\Debug\OPC-tagslist.csprojResolveAssemblyReference.cache
+C:\Users\ZA\source\repos\OPClist\OPC-tagslist\obj\Debug\OPC-tagslist.csproj.CoreCompileInputs.cache
+C:\Users\ZA\source\repos\OPClist\OPC-tagslist\obj\Debug\OPC-tagslist.exe
+C:\Users\ZA\source\repos\OPClist\OPC-tagslist\obj\Debug\OPC-tagslist.pdb
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master\OPC-tagslist\bin\Debug\OPC-tagslist.exe.config
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master\OPC-tagslist\bin\Debug\OPC-tagslist.exe
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master\OPC-tagslist\bin\Debug\OPC-tagslist.pdb
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master\OPC-tagslist\obj\Debug\OPC-tagslist.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master\OPC-tagslist\obj\Debug\OPC-tagslist.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master\OPC-tagslist\obj\Debug\OPC-tagslist.csproj.CopyComplete
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master\OPC-tagslist\obj\Debug\OPC-tagslist.exe
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master\OPC-tagslist\obj\Debug\OPC-tagslist.pdb
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master - Copy\OPC-tagslist\bin\Debug\OPC-tagslist.exe.config
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master - Copy\OPC-tagslist\bin\Debug\OPC-tagslist.exe
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master - Copy\OPC-tagslist\bin\Debug\OPC-tagslist.pdb
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master - Copy\OPC-tagslist\obj\Debug\OPC-tagslist.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master - Copy\OPC-tagslist\obj\Debug\OPC-tagslist.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master - Copy\OPC-tagslist\obj\Debug\OPC-tagslist.csproj.CopyComplete
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master - Copy\OPC-tagslist\obj\Debug\OPC-tagslist.exe
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master - Copy\OPC-tagslist\obj\Debug\OPC-tagslist.pdb
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master - Copy\OPC-tagslist\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master - Copy\OPC-tagslist\bin\Debug\Newtonsoft.Json.xml
