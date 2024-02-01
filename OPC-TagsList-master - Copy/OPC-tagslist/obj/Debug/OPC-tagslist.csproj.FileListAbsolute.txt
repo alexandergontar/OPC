@@ -24,3 +24,13 @@ C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master - Copy\OPC-tagslist\ob
 C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master - Copy\OPC-tagslist\obj\Debug\OPC-tagslist.pdb
 C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master - Copy\OPC-tagslist\bin\Debug\Newtonsoft.Json.dll
 C:\Users\User\Desktop\Intelvision\OPC\OPC-TagsList-master - Copy\OPC-tagslist\bin\Debug\Newtonsoft.Json.xml
+C:\GitLocal\OPC\OPC-TagsList-master - Copy\OPC-tagslist\bin\Debug\OPC-tagslist.exe.config
+C:\GitLocal\OPC\OPC-TagsList-master - Copy\OPC-tagslist\bin\Debug\OPC-tagslist.exe
+C:\GitLocal\OPC\OPC-TagsList-master - Copy\OPC-tagslist\bin\Debug\OPC-tagslist.pdb
+C:\GitLocal\OPC\OPC-TagsList-master - Copy\OPC-tagslist\bin\Debug\Newtonsoft.Json.dll
+C:\GitLocal\OPC\OPC-TagsList-master - Copy\OPC-tagslist\bin\Debug\Newtonsoft.Json.xml
+C:\GitLocal\OPC\OPC-TagsList-master - Copy\OPC-tagslist\obj\Debug\OPC-tagslist.csproj.AssemblyReference.cache
+C:\GitLocal\OPC\OPC-TagsList-master - Copy\OPC-tagslist\obj\Debug\OPC-tagslist.csproj.CoreCompileInputs.cache
+C:\GitLocal\OPC\OPC-TagsList-master - Copy\OPC-tagslist\obj\Debug\OPC-tagslist.csproj.CopyComplete
+C:\GitLocal\OPC\OPC-TagsList-master - Copy\OPC-tagslist\obj\Debug\OPC-tagslist.exe
+C:\GitLocal\OPC\OPC-TagsList-master - Copy\OPC-tagslist\obj\Debug\OPC-tagslist.pdb

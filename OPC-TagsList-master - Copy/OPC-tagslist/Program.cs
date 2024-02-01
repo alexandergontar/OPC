@@ -55,12 +55,7 @@ namespace CSSample
             }
         }
         private void Work()
-        {              
-            /*List<string> confTagList = new List<string>();
-            foreach (string tag in confFromFile.Opc.tags)
-            {
-                confTagList.Add(tag);
-            }*/
+        {                 
             //Создаем экземпляр объекта OpcServerList
             OpcServerList ServersList = new OpcServerList();
             bool serverPresent = false;
