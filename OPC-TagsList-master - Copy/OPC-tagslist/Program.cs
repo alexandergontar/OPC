@@ -39,13 +39,15 @@ namespace CSSample
             try
             {
                 TextReader textReader = File.OpenText("Config.txt");
-                string config = textReader.ReadToEnd();                
+                string config = textReader.ReadToEnd();
+                textReader.Close();
                 confFromFile = JsonConvert.DeserializeObject<Config>(config);
             }
             catch (Exception)
             {
                 throw;
             }
+            
         }
         public void Run()
         {
@@ -153,15 +155,16 @@ namespace CSSample
                     Task<string> result = client.Send(jsonData, confFromFile.POST);
                     result.Wait(20000);
                     Console.WriteLine(result.Result.ToString());
+                    Console.Write("Новые данные успешно отправлены.");
                 }
                 catch (Exception ex)
                 {
-                    Console.Write("Error sending request!");
+                    Console.WriteLine(ex.ToString());
                 }
-                finally
+                /*finally
                 {                   
-                    Console.Write("Новые данные успешно отправлены.");
-                }
+                   // Console.Write("Новые данные успешно отправлены.");
+                }*/
 #pragma warning restore CS0168 // Variable is declared but never used
             }
             catch
