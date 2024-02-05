@@ -19,6 +19,10 @@ namespace OPC_tagslist
         {
             StringContent data = new StringContent(jsonString, Encoding.UTF8, "application/json");
             HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization
+    = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic",
+        Convert.ToBase64String(Encoding.ASCII.GetBytes("username:password")));
+
             var response = await client.PostAsync(url, data);
             string result = await response.Content.ReadAsStringAsync();
             client.Dispose();
