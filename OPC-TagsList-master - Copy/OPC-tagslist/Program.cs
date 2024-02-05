@@ -124,8 +124,15 @@ namespace CSSample
 
                             OPCPropertyData[] data;
                             theSrv.GetItemProperties(tag.ToString(), propIDs, out data);
-                            Console.WriteLine(" {0} : <{1}>", tag.ToString(), data[1].Data);
-                            newTagList.Add($"{tag.ToString()} : <{data[1].Data.ToString()}>");
+                            string tagData = String.Empty;
+                            for (int i = 0; i < data.Length; i++)
+                            {
+                                tagData += data[i].ToString() + " "; 
+                            }
+                            //Console.WriteLine(" {0} : <{1}>", tag.ToString(), data[1].Data);
+                            Console.WriteLine(" {0} : <{1}>", tag.ToString(), tagData);
+                            //newTagList.Add($"{tag.ToString()} : <{data[1].Data.ToString()}>");
+                            newTagList.Add($"{tag.ToString()} : <{tagData}>");
                         }
                     }
                                 

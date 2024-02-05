@@ -21,7 +21,8 @@ namespace OPC_tagslist
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Authorization
     = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic",
-        Convert.ToBase64String(Encoding.ASCII.GetBytes("username:password")));
+        //Convert.ToBase64String(Encoding.ASCII.GetBytes("username:password")));
+        "dXNlcm5hbWU6cGFzc3dvcmQ=");
 
             var response = await client.PostAsync(url, data);
             string result = await response.Content.ReadAsStringAsync();
