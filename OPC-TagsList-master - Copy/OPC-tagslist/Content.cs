@@ -10,6 +10,5 @@ namespace OPC_tagslist
     {
         public string TagName { get; set; }
         public List<TagData> TagDatas { get; set; }
-
     }
 }

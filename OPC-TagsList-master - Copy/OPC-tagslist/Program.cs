@@ -46,8 +46,7 @@ namespace CSSample
             catch (Exception)
             {
                 throw;
-            }
-            
+            }            
         }
         public void Run()
         {
@@ -57,22 +56,16 @@ namespace CSSample
             }
         }
         private void Work()
-        {
-            Console.WriteLine(confFromFile.Username);
-            Console.WriteLine(confFromFile.Password);
+        {           
             List<Content> contents = new List<Content>();
-
             //Создаем экземпляр объекта OpcServerList
             OpcServerList ServersList = new OpcServerList();
             bool serverPresent = false;
             //Создаем массив OpcServers[]
             OpcServers[] SrvListArray;
-
             //формируем массив серверов
             ServersList.ListAllData20(out SrvListArray);
-
             Console.WriteLine("Доступные OPC сервера:");
-
             for (int i = 0; i < SrvListArray.Length; i++)
             {
                 Console.Write("{0}  {1}", i + 1, SrvListArray[i]); // +1, т.к. индекс начинается с нуля
@@ -89,8 +82,7 @@ namespace CSSample
                 Console.WriteLine("Сервер не найден...");
                 Console.ReadKey();
                 return;
-            }
-            
+            }            
             try
             { 
                 //Подключение к серверу
@@ -100,7 +92,6 @@ namespace CSSample
                 theSrv.Connect(serverProgID);
                 Console.WriteLine("Формирую список...");
                 Thread.Sleep(500); //задержка для подключения
-
                 //создаем ArrayList, и помещаем в него все теги
                 ArrayList tagList = new ArrayList();
                 List<string> newTagList = new List<string>();
@@ -127,31 +118,19 @@ namespace CSSample
                             }
 
                             OPCPropertyData[] data;
-                            theSrv.GetItemProperties(tag.ToString(), propIDs, out data);
-                            string tagData = "";
-                            // contents = new List<Content>();
+                            theSrv.GetItemProperties(tag.ToString(), propIDs, out data);                          
                             Content content = new Content();
                             content.TagName = tag.ToString();
                             List<TagData> tagDatas = new List<TagData>();
                             content.TagDatas = tagDatas;
                             for (int i = 0; i < data.Length; i++)
-                            {
-                                tagData += "{id:"+data[i].PropertyID.ToString() + ", data:"+ data[i].Data.ToString()+"}, ";
-                                
-                                TagData tagData1 = new TagData();
-                                tagData1.Id = data[i].PropertyID;
-                                tagData1.Data = data[i].Data.ToString();
-                                content.TagDatas.Add(tagData1);
-                                
-                                //content.TagDatas = tagData1;
-                                //Console.WriteLine(data[i].PropertyID.ToString()); 
-                                //Console.WriteLine( data[i].Data.ToString());
+                            {                                
+                                TagData tagData = new TagData();
+                                tagData.Id = data[i].PropertyID;
+                                tagData.Data = data[i].Data.ToString();
+                                content.TagDatas.Add(tagData);                                
                             }
-                            contents.Add(content);
-                            //Console.WriteLine(" {0} : <{1}>", tag.ToString(), data[1].Data);
-                            //Console.WriteLine(" {0} : <{1}>", tag.ToString(), tagData);
-                            //newTagList.Add($"{tag.ToString()} : <{data[1].Data.ToString()}>");
-                            //newTagList.Add($"{tag.ToString()} : <{tagData}>");
+                            contents.Add(content);                            
                         }
                     }
                                 
@@ -159,15 +138,10 @@ namespace CSSample
                 try
                 {  // Формируем JSON данные для запроса
                     Message message = new Message();                    
-                    message.Header = "Всего объектов: " + contents.Count;
-                   /* foreach (var tag in newTagList)
-                    {                        
-                        message.tags.Add(tag.ToString());
-                    }*/
+                    message.Header = "Всего объектов: " + contents.Count;                   
                     message.contents = contents;
                     string jsonData = JsonConvert.SerializeObject(message);
-                    Console.WriteLine(jsonData);         
-                   
+                    Console.WriteLine(jsonData);                   
                     // если данные совпадают с предыдущими, запрос не посылаем
                     if (tempData == jsonData)
                     {
@@ -187,18 +161,13 @@ namespace CSSample
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
-                }
-                /*finally
-                {                   
-                   // Console.Write("Новые данные успешно отправлены.");
-                }*/
+                }                
 #pragma warning restore CS0168 // Variable is declared but never used
             }
             catch
             {
                 Console.Write("Ошибка. Либо неправильный ввод, либо не удалось подключиться к серверу");
             }
-
             Console.ReadLine();
         }
 

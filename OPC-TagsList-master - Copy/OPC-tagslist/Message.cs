@@ -8,18 +8,12 @@ namespace OPC_tagslist
 {
     public class Message
     {
-        public string Header { get; set; }
-        public List<string> tags;
+        public string Header { get; set; }        
         public List<Content> contents;   
         public Message() 
         {
-            this.tags = new List<string>();
-        }
-        public Message(List<string> tags) 
-        {
-            this.tags = tags;
-            contents = new List<Content>(); 
-        }
+            
+        }     
 
     }
 }
