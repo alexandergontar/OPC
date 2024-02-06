@@ -1,5 +1,7 @@
 {
   "POST":"https://httpbin.org/post",
+  "Username":"username",
+  "Password":"password", 
   "OPC":{
     "Server":"InSAT.ModbusOPCServer.DA",
     "Tags":  [

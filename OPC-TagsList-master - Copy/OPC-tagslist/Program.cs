@@ -57,7 +57,11 @@ namespace CSSample
             }
         }
         private void Work()
-        {                 
+        {
+            Console.WriteLine(confFromFile.Username);
+            Console.WriteLine(confFromFile.Password);
+            List<Content> contents = new List<Content>();
+
             //Создаем экземпляр объекта OpcServerList
             OpcServerList ServersList = new OpcServerList();
             bool serverPresent = false;
@@ -124,15 +128,30 @@ namespace CSSample
 
                             OPCPropertyData[] data;
                             theSrv.GetItemProperties(tag.ToString(), propIDs, out data);
-                            string tagData = String.Empty;
+                            string tagData = "";
+                            // contents = new List<Content>();
+                            Content content = new Content();
+                            content.TagName = tag.ToString();
+                            List<TagData> tagDatas = new List<TagData>();
+                            content.TagDatas = tagDatas;
                             for (int i = 0; i < data.Length; i++)
                             {
-                                tagData += data[i].ToString() + " "; 
+                                tagData += "{id:"+data[i].PropertyID.ToString() + ", data:"+ data[i].Data.ToString()+"}, ";
+                                
+                                TagData tagData1 = new TagData();
+                                tagData1.Id = data[i].PropertyID;
+                                tagData1.Data = data[i].Data.ToString();
+                                content.TagDatas.Add(tagData1);
+                                
+                                //content.TagDatas = tagData1;
+                                //Console.WriteLine(data[i].PropertyID.ToString()); 
+                                //Console.WriteLine( data[i].Data.ToString());
                             }
+                            contents.Add(content);
                             //Console.WriteLine(" {0} : <{1}>", tag.ToString(), data[1].Data);
-                            Console.WriteLine(" {0} : <{1}>", tag.ToString(), tagData);
+                            //Console.WriteLine(" {0} : <{1}>", tag.ToString(), tagData);
                             //newTagList.Add($"{tag.ToString()} : <{data[1].Data.ToString()}>");
-                            newTagList.Add($"{tag.ToString()} : <{tagData}>");
+                            //newTagList.Add($"{tag.ToString()} : <{tagData}>");
                         }
                     }
                                 
@@ -140,11 +159,12 @@ namespace CSSample
                 try
                 {  // Формируем JSON данные для запроса
                     Message message = new Message();                    
-                    message.Header = "Всего объектов: " + newTagList.Count;
-                    foreach (var tag in newTagList)
+                    message.Header = "Всего объектов: " + contents.Count;
+                   /* foreach (var tag in newTagList)
                     {                        
                         message.tags.Add(tag.ToString());
-                    }
+                    }*/
+                    message.contents = contents;
                     string jsonData = JsonConvert.SerializeObject(message);
                     Console.WriteLine(jsonData);         
                    
@@ -159,7 +179,7 @@ namespace CSSample
                     tempData = jsonData;
                     Console.WriteLine("Now post JSON to server, please wait...");
                     Client client = new Client();
-                    Task<string> result = client.Send(jsonData, confFromFile.POST);
+                    Task<string> result = client.Send(jsonData, confFromFile.POST, confFromFile.Username, confFromFile.Password);
                     result.Wait(20000);
                     Console.WriteLine(result.Result.ToString());
                     Console.Write("Новые данные успешно отправлены.");

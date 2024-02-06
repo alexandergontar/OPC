@@ -10,7 +10,7 @@ namespace OPC_tagslist
     {
         public string Header { get; set; }
         public List<string> tags;
-
+        public List<Content> contents;   
         public Message() 
         {
             this.tags = new List<string>();
@@ -18,6 +18,7 @@ namespace OPC_tagslist
         public Message(List<string> tags) 
         {
             this.tags = tags;
+            contents = new List<Content>(); 
         }
 
     }
