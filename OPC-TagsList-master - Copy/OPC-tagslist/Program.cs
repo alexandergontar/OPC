@@ -146,7 +146,8 @@ namespace CSSample
                     if (tempData == jsonData)
                     {
                         Console.WriteLine("\n Данные без изменений, отправка не требуется.");
-                        Console.ReadKey();                        
+                        //Console.ReadKey();
+                        Thread.Sleep(10000);
                         return;
                     }
                     // если данные изменились, запоминаем и посылаем http запрос
@@ -168,7 +169,8 @@ namespace CSSample
             {
                 Console.Write("Ошибка. Либо неправильный ввод, либо не удалось подключиться к серверу");
             }
-            Console.ReadLine();
+            //Console.ReadLine();
+            Thread.Sleep(10000);
         }
 
         static void Main(string[] args)
